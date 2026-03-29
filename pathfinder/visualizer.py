@@ -1,6 +1,4 @@
-# visualizer.py
-# Made using pygame to show A* pathfinding on a city map.
-# Click start, click end, press S to solve!
+
 
 import pygame, sys, math
 from graph import build_city
@@ -10,10 +8,10 @@ from astar import astar
 WHITE  = (255, 255, 255)
 BLACK  = (0,   0,   0)
 GREY   = (200, 200, 200)
-GREEN  = (0,   200, 100)  # start node
-RED    = (220, 50,  50)   # end node
-YELLOW = (220, 200, 0)    # visited by A*
-PURPLE = (180, 50,  230)  # final path
+GREEN  = (0,   200, 100)  
+RED    = (220, 50,  50)   
+YELLOW = (220, 200, 0)    
+PURPLE = (180, 50,  230)  
 
 # window
 W, H = 900, 620
