@@ -28,13 +28,18 @@ This makes A* **smarter** than regular algorithms — it aims toward the goal in
 ## 📁 Files
 
 ```
-shortest-path-finder/
-├── main.py         ← Run this to start
-├── graph.py        ← City map (places + roads)
-├── astar.py        ← A* algorithm
-├── visualizer.py   ← Animation using pygame
-├── requirements.txt
-└── README.md
+shortest-path-finder/          ← root of your repo
+│
+├── main.py                    ← upload to root
+├── requirements.txt           ← upload to root
+├── README.md                  ← upload to root
+├── .gitignore                 ← upload to root
+│
+└── pathfinder/                ← create this folder on GitHub
+    ├── __init__.py
+    ├── graph.py
+    ├── astar.py
+    └── visualizer.py
 ```
 
 ---
