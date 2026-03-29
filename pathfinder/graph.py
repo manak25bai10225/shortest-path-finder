@@ -1,22 +1,5 @@
-# graph.py
-# --------
-# This file creates the city map.
-# A city map is just a GRAPH:
-#   - NODES = places (like "Airport", "Hospital")
-#   - EDGES = roads connecting two places
-#   - WEIGHT = distance of that road (shorter road = smaller number)
 
 import math
-
-# The city is stored as two simple dictionaries:
-#
-# node_positions = { "Place Name": (x, y) }
-#   tells us WHERE each place is on the screen
-#
-# adjacency = { "Place Name": [("Neighbour", distance), ...] }
-#   tells us which places are connected by roads
-
-
 def get_distance(positions, place_a, place_b):
     """Calculate straight-line distance between two places."""
     x1, y1 = positions[place_a]
@@ -25,23 +8,13 @@ def get_distance(positions, place_a, place_b):
 
 
 def add_road(adjacency, positions, place_a, place_b):
-    """Connect two places with a road. Distance is auto-calculated."""
     dist = get_distance(positions, place_a, place_b)
     adjacency[place_a].append((place_b, dist))
-    adjacency[place_b].append((place_a, dist))  # road goes both ways
+    adjacency[place_b].append((place_a, dist))  
 
 
 def build_city():
-    """
-    Build and return a sample city with 20 places and roads.
-    Returns two things:
-        positions  - where each place is (x, y)
-        adjacency  - which places are connected
-    """
-
-    # --- Step 1: Define all places and their (x, y) position on screen ---
     positions = {
-        # City centre
         "Central Station": (350, 270),
         "City Hall":        (230, 270),
         "Market Square":    (470, 270),
@@ -68,7 +41,6 @@ def build_city():
         "Suburbs":          (100, 390),
     }
 
-    # --- Step 2: Start with empty adjacency list for every place ---
     adjacency = {place: [] for place in positions}
 
     # --- Step 3: Connect places with roads ---
